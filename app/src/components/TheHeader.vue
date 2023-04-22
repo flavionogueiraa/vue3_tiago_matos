@@ -1,5 +1,20 @@
 <template>
   <div>
+    <h1 :class="{ title: false, 'title-home': isHome }">Curso de Vue 3</h1>
+
+    <p :class="pClass">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      dolores! Pariatur quibusdam nihil distinctio cupiditate quae eius alias,
+      amet ut ipsa nisi, impedit dolore iure exercitationem vitae placeat.
+      Consequatur, veniam.
+    </p>
+    <p :style="styleClass">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque modi
+      obcaecati sit eaque vero corporis laborum expedita eum veniam quo ex, iure
+      ullam, cupiditate necessitatibus ipsa ducimus, consequuntur temporibus
+      quos!
+    </p>
+
     <div class="todos-items" v-for="(obj, index) in todos" :key="obj.id">
       <img v-if="obj.imgSrc" :src="obj.imgSrc" />
       {{ index }} - {{ obj.title }}
@@ -47,6 +62,14 @@ export default {
           completed: false,
         },
       ],
+      classVar: "title",
+      isHome: true,
+      pClass: ["text", "text-home"],
+      styleClass: {
+        color: "black",
+        backgroundColor: "red",
+        "font-size": "20px",
+      },
     };
   },
 };
@@ -59,5 +82,23 @@ export default {
   padding: 3px 6px;
   color: white;
   border-radius: 5px;
+}
+
+.title {
+  font-size: 20px;
+  color: blue;
+}
+
+.title-home {
+  font-size: 40px;
+  color: green;
+}
+
+.text-home {
+  color: cyan;
+}
+
+.text {
+  color: yellow;
 }
 </style>
