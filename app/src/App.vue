@@ -13,14 +13,16 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   <!-- <TwoWayDataBinding></TwoWayDataBinding> -->
-  <EventoComponent></EventoComponent>
+  <!-- <EventoComponent></EventoComponent> -->
+  <ComputedProperty></ComputedProperty>
 </template>
 
 <script>
 // import TheHeader from "./components/TheHeader.vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
-import EventoComponent from './components/EventoComponent.vue';
+// import EventoComponent from './components/EventoComponent.vue';
+import ComputedProperty from "./components/ComputedProperty.vue";
 
 export default {
   name: "App",
@@ -28,7 +30,8 @@ export default {
     // HelloWorld,
     // TheHeader,
     // TwoWayDataBinding,
-    EventoComponent,
+    // EventoComponent,
+    ComputedProperty,
   },
   data() {
     return {
