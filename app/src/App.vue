@@ -12,20 +12,23 @@
 
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-  <TwoWayDataBinding></TwoWayDataBinding>
+  <!-- <TwoWayDataBinding></TwoWayDataBinding> -->
+  <EventoComponent></EventoComponent>
 </template>
 
 <script>
 // import TheHeader from "./components/TheHeader.vue";
 // import HelloWorld from "./components/HelloWorld.vue";
-import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
+// import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
+import EventoComponent from './components/EventoComponent.vue';
 
 export default {
   name: "App",
   components: {
     // HelloWorld,
     // TheHeader,
-    TwoWayDataBinding,
+    // TwoWayDataBinding,
+    EventoComponent,
   },
   data() {
     return {
