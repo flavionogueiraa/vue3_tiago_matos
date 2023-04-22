@@ -14,7 +14,8 @@
   <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   <!-- <TwoWayDataBinding></TwoWayDataBinding> -->
   <!-- <EventoComponent></EventoComponent> -->
-  <ComputedProperty></ComputedProperty>
+  <!-- <ComputedProperty></ComputedProperty> -->
+  <ObservadoresComponent></ObservadoresComponent>
 </template>
 
 <script>
@@ -22,7 +23,8 @@
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
 // import EventoComponent from './components/EventoComponent.vue';
-import ComputedProperty from "./components/ComputedProperty.vue";
+// import ComputedProperty from "./components/ComputedProperty.vue";
+import ObservadoresComponent from "./components/ObservadoresComponent.vue";
 
 export default {
   name: "App",
@@ -31,7 +33,8 @@ export default {
     // TheHeader,
     // TwoWayDataBinding,
     // EventoComponent,
-    ComputedProperty,
+    // ComputedProperty,
+    ObservadoresComponent,
   },
   data() {
     return {
