@@ -1,8 +1,19 @@
 <template>
   <div>
-    <h1 :class="{ title: false, 'title-home': isHome }">Curso de Vue 3</h1>
+    <header class="header">
+      <h1 v-if="$slots.title" class="title">
+        <slot name="title" />
+      </h1>
+      <div v-if="$slots.description" class="description">
+        <slot name="description" />
+      </div>
 
-    <p :class="pClass">
+      <div class="content">
+        <slot></slot>
+      </div>
+    </header>
+
+    <!-- <p :class="pClass">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
       dolores! Pariatur quibusdam nihil distinctio cupiditate quae eius alias,
       amet ut ipsa nisi, impedit dolore iure exercitationem vitae placeat.
@@ -18,7 +29,7 @@
     <div class="todos-items" v-for="(obj, index) in todos" :key="obj.id">
       <img v-if="obj.imgSrc" :src="obj.imgSrc" />
       {{ index }} - {{ obj.title }}
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -74,24 +85,25 @@ export default {
   },
 
   mounted() {
-    window.addEventListener("resize", this.resize);
+    // window.addEventListener("resize", this.resize);
+    console.log(this.$slots);
   },
 
-  beforeUnmount() {
-    window.removeEventListener("resize", this.resize);
-    console.log("beforeUnmount");
-    console.log("DOM:", this.$el);
-  },
+  // beforeUnmount() {
+  //   window.removeEventListener("resize", this.resize);
+  //   console.log("beforeUnmount");
+  //   console.log("DOM:", this.$el);
+  // },
 
-  unmounted() {
-    console.log("unmounted");
-    console.log("DOM:", this.$el);
-  },
+  // unmounted() {
+  //   console.log("unmounted");
+  //   console.log("DOM:", this.$el);
+  // },
 
   methods: {
-    resize($evt) {
-      console.log($evt);
-    },
+    // resize($evt) {
+    //   console.log($evt);
+    // },
   },
 };
 </script>
@@ -105,9 +117,9 @@ export default {
   border-radius: 5px;
 }
 
-.title {
-  font-size: 20px;
-  color: blue;
+.header {
+  color: white;
+  background: black;
 }
 
 .title-home {

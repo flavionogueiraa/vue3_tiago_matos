@@ -16,7 +16,8 @@
   <!-- <EventoComponent></EventoComponent> -->
   <!-- <ComputedProperty></ComputedProperty> -->
   <!-- <ObservadoresComponent></ObservadoresComponent> -->
-  <LifeCycle></LifeCycle>
+  <!-- <LifeCycle></LifeCycle> -->
+  <ComponentSlot></ComponentSlot>
 </template>
 
 <script>
@@ -26,7 +27,8 @@
 // import EventoComponent from './components/EventoComponent.vue';
 // import ComputedProperty from "./components/ComputedProperty.vue";
 // import ObservadoresComponent from "./components/ObservadoresComponent.vue";
-import LifeCycle from "./components/LifeCycle.vue";
+// import LifeCycle from "./components/LifeCycle.vue";
+import ComponentSlot from "./components/ComponentSlot.vue";
 
 export default {
   name: "App",
@@ -37,7 +39,8 @@ export default {
     // EventoComponent,
     // ComputedProperty,
     // ObservadoresComponent,
-    LifeCycle,
+    // LifeCycle,
+    ComponentSlot,
   },
   data() {
     return {
