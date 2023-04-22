@@ -17,7 +17,11 @@
   <!-- <ComputedProperty></ComputedProperty> -->
   <!-- <ObservadoresComponent></ObservadoresComponent> -->
   <!-- <LifeCycle></LifeCycle> -->
-  <ComponentSlot></ComponentSlot>
+  <!-- <ComponentSlot></ComponentSlot> -->
+  <div>
+    <BaseCard></BaseCard>
+    <div class="card">Example</div>
+  </div>
 </template>
 
 <script>
@@ -28,7 +32,8 @@
 // import ComputedProperty from "./components/ComputedProperty.vue";
 // import ObservadoresComponent from "./components/ObservadoresComponent.vue";
 // import LifeCycle from "./components/LifeCycle.vue";
-import ComponentSlot from "./components/ComponentSlot.vue";
+// import ComponentSlot from "./components/ComponentSlot.vue";
+import BaseCard from "./components/BaseCard.vue";
 
 export default {
   name: "App",
@@ -40,7 +45,8 @@ export default {
     // ComputedProperty,
     // ObservadoresComponent,
     // LifeCycle,
-    ComponentSlot,
+    // ComponentSlot,
+    BaseCard,
   },
   data() {
     return {
