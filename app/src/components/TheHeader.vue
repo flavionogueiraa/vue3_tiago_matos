@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="todos-items" v-for="(obj, index) in todos" v-bind:key="obj.id">
+    <div class="todos-items" v-for="(obj, index) in todos" :key="obj.id">
+      <img v-if="obj.imgSrc" :src="obj.imgSrc" />
       {{ index }} - {{ obj.title }}
     </div>
   </div>
@@ -17,12 +18,14 @@ export default {
           id: 1,
           title: "delectus aut autem",
           completed: false,
+          imgSrc: "https://placehold.co/600x400",
         },
         {
           userId: 1,
           id: 2,
           title: "quis ut nam facilis et officia qui",
           completed: false,
+          imgSrc: "https://placehold.co/600x400",
         },
         {
           userId: 1,
@@ -51,10 +54,10 @@ export default {
 
 <style>
 .todos-items {
-    background: black;
-    margin: 0 0 5px 0;
-    padding: 3px 6px;
-    color: white;
-    border-radius: 5px;
+  background: black;
+  margin: 0 0 5px 0;
+  padding: 3px 6px;
+  color: white;
+  border-radius: 5px;
 }
 </style>
