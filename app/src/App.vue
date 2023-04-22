@@ -1,5 +1,5 @@
 <template>
-  <TheHeader v-if="showHeader" />
+  <!-- <TheHeader v-if="showHeader" />
 
   <div v-show="showName">
     Nome: {{ firstName }} <br />
@@ -11,18 +11,21 @@
   <div v-else>Usuário  normal</div>
 
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <TwoWayDataBinding></TwoWayDataBinding>
 </template>
 
 <script>
-import TheHeader from "./components/TheHeader.vue";
-import HelloWorld from "./components/HelloWorld.vue";
+// import TheHeader from "./components/TheHeader.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-    TheHeader,
+    // HelloWorld,
+    // TheHeader,
+    TwoWayDataBinding,
   },
   data() {
     return {
@@ -30,7 +33,7 @@ export default {
       firstName: "Jon",
       lastName: "Snow",
       showName: false,
-      accessLevel: "marketing"
+      accessLevel: "marketing",
     };
   },
 };
@@ -41,8 +44,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px;
 }
 </style>
