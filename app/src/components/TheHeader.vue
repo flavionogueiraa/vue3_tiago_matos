@@ -72,6 +72,27 @@ export default {
       },
     };
   },
+
+  mounted() {
+    window.addEventListener("resize", this.resize);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("resize", this.resize);
+    console.log("beforeUnmount");
+    console.log("DOM:", this.$el);
+  },
+
+  unmounted() {
+    console.log("unmounted");
+    console.log("DOM:", this.$el);
+  },
+
+  methods: {
+    resize($evt) {
+      console.log($evt);
+    },
+  },
 };
 </script>
 

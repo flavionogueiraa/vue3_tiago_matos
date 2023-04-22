@@ -15,7 +15,8 @@
   <!-- <TwoWayDataBinding></TwoWayDataBinding> -->
   <!-- <EventoComponent></EventoComponent> -->
   <!-- <ComputedProperty></ComputedProperty> -->
-  <ObservadoresComponent></ObservadoresComponent>
+  <!-- <ObservadoresComponent></ObservadoresComponent> -->
+  <LifeCycle></LifeCycle>
 </template>
 
 <script>
@@ -24,7 +25,8 @@
 // import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
 // import EventoComponent from './components/EventoComponent.vue';
 // import ComputedProperty from "./components/ComputedProperty.vue";
-import ObservadoresComponent from "./components/ObservadoresComponent.vue";
+// import ObservadoresComponent from "./components/ObservadoresComponent.vue";
+import LifeCycle from "./components/LifeCycle.vue";
 
 export default {
   name: "App",
@@ -34,7 +36,8 @@ export default {
     // TwoWayDataBinding,
     // EventoComponent,
     // ComputedProperty,
-    ObservadoresComponent,
+    // ObservadoresComponent,
+    LifeCycle,
   },
   data() {
     return {
