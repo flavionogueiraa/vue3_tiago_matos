@@ -22,8 +22,10 @@
     <!-- <BaseCard></BaseCard>
     <div class="card">Example</div> -->
     <BaseAlert
+      v-if="showAlert"
       variant="wanrning"
       text="Seu formulário foi enviado com sucesso!"
+      @close="onClose()"
     ></BaseAlert>
   </div>
 </template>
@@ -61,7 +63,14 @@ export default {
       lastName: "Snow",
       showName: false,
       accessLevel: "marketing",
+      showAlert: true,
     };
+  },
+  methods: {
+    onClose() {
+      this.showAlert = false;
+      console.log("onClose");
+    },
   },
 };
 </script>

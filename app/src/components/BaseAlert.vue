@@ -1,5 +1,9 @@
 <template>
-  <div :class="baseClass">{{ text }}</div>
+  <div :class="baseClass">
+    {{ text }}
+
+    <button @click="onClick">x</button>
+  </div>
 </template>
 
 <script>
@@ -17,7 +21,12 @@ export default {
     },
   },
 
-  methods: {},
+  methods: {
+    onClick() {
+      this.$emit("close");
+      console.log("Clicou");
+    },
+  },
 
   props: {
     variant: {
@@ -34,6 +43,8 @@ export default {
 
 <style scoped>
 .alert {
+  display: flex;
+  justify-content: space-between;
   padding: 5px;
   border-radius: 6px;
   color: gray;
