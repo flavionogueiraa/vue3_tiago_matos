@@ -19,12 +19,17 @@
   <!-- <LifeCycle></LifeCycle> -->
   <!-- <ComponentSlot></ComponentSlot> -->
   <div>
-    <BaseCard></BaseCard>
-    <div class="card">Example</div>
+    <!-- <BaseCard></BaseCard>
+    <div class="card">Example</div> -->
+    <BaseAlert
+      variant="wanrning"
+      text="Seu formulário foi enviado com sucesso!"
+    ></BaseAlert>
   </div>
 </template>
 
 <script>
+import BaseAlert from "./components/BaseAlert.vue";
 // import TheHeader from "./components/TheHeader.vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TwoWayDataBinding from "./components/TwoWayDataBinding.vue";
@@ -33,7 +38,7 @@
 // import ObservadoresComponent from "./components/ObservadoresComponent.vue";
 // import LifeCycle from "./components/LifeCycle.vue";
 // import ComponentSlot from "./components/ComponentSlot.vue";
-import BaseCard from "./components/BaseCard.vue";
+// import BaseCard from "./components/BaseCard.vue";
 
 export default {
   name: "App",
@@ -46,7 +51,8 @@ export default {
     // ObservadoresComponent,
     // LifeCycle,
     // ComponentSlot,
-    BaseCard,
+    // BaseCard,
+    BaseAlert,
   },
   data() {
     return {
