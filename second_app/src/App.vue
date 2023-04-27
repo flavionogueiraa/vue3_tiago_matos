@@ -2,8 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link :to="rotaDinamica">Serviços</router-link>
-
+    <router-link :to="rotaDinamica">Serviços</router-link> |
+    <router-link to="/usuarios/10">Editar usuário</router-link>
     <router-view />
   </nav>
 </template>
@@ -25,7 +25,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
