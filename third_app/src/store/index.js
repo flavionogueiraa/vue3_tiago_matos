@@ -10,7 +10,12 @@ export default createStore({
     products: [],
     cart: [],
   },
-  mutations: {},
+  mutations: {
+    storeUser(state, data) {
+      console.log("storeUser", data, state);
+      state.user = data;
+    },
+  },
   actions: {},
   getters: {},
 });

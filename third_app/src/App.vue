@@ -5,6 +5,8 @@
     {{ $store.state.user.first_name }}
     {{ $store.state.user.last_name }}
     {{ $store.state.user.email }}
+
+    <button @click="updateUser">Save user</button>
   </div>
 </template>
 
@@ -19,8 +21,17 @@ export default {
   data() {
     return {};
   },
-  created() {
-    // console.log(this.$store.state.user);
+  created() {},
+  methods: {
+    updateUser() {
+      const newUser = {
+        first_name: "John",
+        last_name: "Doe",
+        email: "john.doe@gmail.com",
+      };
+
+      this.$store.commit("storeUser", newUser);
+    },
   },
 };
 </script>
