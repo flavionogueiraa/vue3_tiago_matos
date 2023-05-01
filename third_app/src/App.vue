@@ -1,23 +1,20 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    {{ $store.state.user.first_name }}
-    {{ $store.state.user.last_name }}
-    {{ $store.state.user.email }}
-
-    <button @click="updateUser">Save user</button>
+    <pre>
+      {{ $store.state.cart }}
+    </pre>
+    <br />
+    <AppProducts />
+    <!-- <button @click="updateUser">Save user</button> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppProducts from "./components/Products/AppProducts.vue";
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { AppProducts },
   data() {
     return {};
   },
@@ -41,7 +38,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
