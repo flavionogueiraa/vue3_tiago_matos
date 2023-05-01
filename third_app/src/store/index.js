@@ -40,5 +40,9 @@ export default createStore({
     },
   },
   actions: {},
-  getters: {},
+  getters: {
+    total(state) {
+      return state.cart.reduce((total, product) => (total += product.price), 0);
+    },
+  },
 });
