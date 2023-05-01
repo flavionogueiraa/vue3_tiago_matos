@@ -28,7 +28,6 @@ export default createStore({
   },
   mutations: {
     storeUser(state, data) {
-      console.log("storeUser", data, state);
       state.user = data;
     },
     addProductInCart(state, product) {
@@ -39,7 +38,17 @@ export default createStore({
       state.cart.splice(index, 1);
     },
   },
-  actions: {},
+  actions: {
+    storeUser(context, data) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          context.commit("storeUser", data);
+          resolve();
+          console.log("User stored");
+        }, 3000);
+      });
+    },
+  },
   getters: {
     total(state) {
       return state.cart.reduce((total, product) => (total += product.price), 0);

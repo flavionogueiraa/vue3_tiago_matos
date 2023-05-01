@@ -5,7 +5,11 @@
     </pre>
     <br />
     <AppProducts />
-    <!-- <button @click="updateUser">Save user</button> -->
+
+    <pre>
+      {{ $store.state.user }}
+    </pre>
+    <button @click="updateUser">Save user</button>
   </div>
 </template>
 
@@ -27,7 +31,10 @@ export default {
         email: "john.doe@gmail.com",
       };
 
-      this.$store.commit("storeUser", newUser);
+      // this.$store.commit("storeUser", newUser);
+      this.$store.dispatch("storeUser", newUser).then(() => {
+        console.log("User saved!");
+      });
     },
   },
 };
