@@ -1,7 +1,12 @@
 <template>
   <div>
-    <button @click="showAppHook = !showAppHook">Toggle AppHook</button> <br />
-    <AppHook v-if="showAppHook"></AppHook> <br />
+    <AppButton data-vue="Flávio" @update="getUpdate">
+      Save
+      <template #icon>Icon here</template>
+    </AppButton>
+
+    <!-- <button @click="showAppHook = !showAppHook">Toggle AppHook</button> <br />
+    <AppHook v-if="showAppHook"></AppHook> <br /> -->
 
     <!-- {{ name }} <br /><br /> -->
     <!-- <h5>User</h5>
@@ -30,44 +35,50 @@
 
     <!-- <AppProduct></AppProduct> -->
 
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
 
 <script>
-import { ref, computed, watch } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+// import { ref, computed, watch } from "vue";
+// import HelloWorld from "./components/HelloWorld.vue";
 // import AppProduct from "./components/Products/AppProduct.vue";
-import AppHook from "./components/AppHook.vue";
+// import AppHook from "./components/AppHook.vue";
+import AppButton from "./components/AppButton.vue";
 
 export default {
   name: "App",
   components: {
     // AppProduct,
-    HelloWorld,
-    AppHook,
+    // HelloWorld,
+    // AppHook,
+    AppButton,
   },
   setup() {
-    const showAppHook = ref(true);
+    const getUpdate = (data) => {
+      console.log("getUpdate", data);
+    };
 
-    const user = ref({
-      first_name: "John",
-      last_name: "Wick",
-    });
+    // const showAppHook = ref(true);
 
-    const fullName = computed(
-      () => `${user.value.first_name} ${user.value.last_name}`
-    );
+    // const user = ref({
+    //   first_name: "John",
+    //   last_name: "Wick",
+    // });
 
-    watch(
-      user,
-      () => {
-        console.log("user changed");
-        console.log("Lógica cabulosa");
-      },
-      { deep: true }
-    );
+    // const fullName = computed(
+    //   () => `${user.value.first_name} ${user.value.last_name}`
+    // );
+
+    // watch(
+    //   user,
+    //   () => {
+    //     console.log("user changed");
+    //     console.log("Lógica cabulosa");
+    //   },
+    //   { deep: true }
+    // );
 
     // const admin = ref({
     //   first_name: "Admin",
@@ -86,13 +97,14 @@ export default {
     // };
 
     return {
-      user,
-      fullName,
-      showAppHook,
+      // user,
+      // fullName,
+      // showAppHook,
       // admin,
       // name,
       // count,
       // changeName,
+      getUpdate,
     };
   },
 };
