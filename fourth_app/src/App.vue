@@ -1,17 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    {{ name }}
+    <AppProduct></AppProduct>
+
+    <img @click="changeName()" alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import AppProduct from "./components/Products/AppProduct.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AppProduct,
+    HelloWorld,
+  },
+  setup() {
+    let name = "Flávio";
+    const changeName = () => {
+      alert("changeName");
+      name = "John Wick";
+    };
+
+    return {
+      name,
+      changeName,
+    };
+  },
+};
 </script>
 
 <style>
