@@ -1,7 +1,10 @@
 <template>
   <div>
+    <button @click="showAppHook = !showAppHook">Toggle AppHook</button> <br />
+    <AppHook v-if="showAppHook"></AppHook> <br />
+
     <!-- {{ name }} <br /><br /> -->
-    <h5>User</h5>
+    <!-- <h5>User</h5>
     {{ user.first_name }}
     {{ user.last_name }}
 
@@ -12,7 +15,8 @@
     <br />
     <button @click="user.first_name = 'Example name'">Atualizar nome</button>
 
-    <br />
+    <br /> -->
+
     <!-- <h5>Admin</h5>
     {{ admin.first_name }}
     {{ admin.last_name }}
@@ -35,14 +39,18 @@
 import { ref, computed, watch } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 // import AppProduct from "./components/Products/AppProduct.vue";
+import AppHook from "./components/AppHook.vue";
 
 export default {
   name: "App",
   components: {
     // AppProduct,
     HelloWorld,
+    AppHook,
   },
   setup() {
+    const showAppHook = ref(true);
+
     const user = ref({
       first_name: "John",
       last_name: "Wick",
@@ -80,6 +88,7 @@ export default {
     return {
       user,
       fullName,
+      showAppHook,
       // admin,
       // name,
       // count,

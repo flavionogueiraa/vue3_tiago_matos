@@ -1,0 +1,28 @@
+<template>
+  <div>
+    <h1>AppHook</h1>
+  </div>
+</template>
+
+<script>
+import { onBeforeMount, onMounted, onBeforeUnmount, onUnmounted } from "vue";
+
+export default {
+  setup() {
+    onBeforeMount(() => {
+      console.log("onBeforeMount");
+    });
+    onMounted(() => {
+      console.log("onMounted");
+    });
+    onBeforeUnmount(() => {
+      console.log("onBeforeUnmount");
+    });
+    onUnmounted(() => {
+      console.log("onUnmounted");
+    });
+  },
+};
+</script>
+
+<style></style>
